@@ -1,4 +1,4 @@
-#N canvas 146 70 814 596 10;
+#N canvas 147 67 814 596 10;
 #X floatatom 302 162 5 0 0 0 - - -, f 5;
 #X text 76 94 args are (pin number \, mode (0=OUTPUT \, 1=INPUT) \,
 and default value, f 25;
