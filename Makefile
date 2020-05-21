@@ -6,7 +6,7 @@ LIBRARY_NAME = rpi_gpio
 # add your .c source files, one object per file, to the SOURCES
 # variable, help files will be included automatically, and for GUI
 # objects, the matching .tcl file too
-SOURCES = rpi_gpio.c rpi_gpio_shiftin.c
+SOURCES = rpi_gpio.c rpi_gpio_shiftin.c rpi_gpio_mcp3008.c
 
 # list all pd objects (i.e. myobject.pd) files here, and their helpfiles will
 # be included automatically
