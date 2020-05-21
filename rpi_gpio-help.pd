@@ -1,0 +1,105 @@
+#N canvas 143 79 814 596 10;
+#X text -17 433 Jaime Oliver La Rosa - 2014 (la.rosa@nyu.edu);
+#X text -45 346 This object uses the wiringPi library. For more information
+see: http://www.wiringpi.com, f 38;
+#X floatatom 302 162 5 0 0 0 - - -, f 5;
+#X text -11 101 args are (pin number \, mode (0=OUTPUT \, 1=INPUT)
+\, and default value, f 25;
+#X text -27 13 In OUTPUT mode \, change the number box to send the
+value out the pin, f 27;
+#X obj 302 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom -7 324 5 0 0 0 - - -, f 5;
+#X obj -64 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -7 250 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text -39 202 In INPUT mode \, bang the object to see value on the
+pin, f 27;
+#X obj -7 270 metro 20;
+#X obj 313 53 loadbang;
+#X obj 313 75 metro 100;
+#X floatatom 353 352 5 0 0 0 - - -, f 5;
+#X obj 353 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 492 331 5 0 0 0 - - -, f 5;
+#X obj 492 309 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 302 183 rpi_gpio 22 0 1;
+#X obj 348 369 rpi_gpio 23 0 1;
+#X obj 488 371 rpi_gpio 24 0 1;
+#X obj -7 302 rpi_gpio 1 1 0;
+#X obj 513 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 634 431 unpack;
+#X obj 442 106;
+#X obj 533 94 rpi_gpio_shiftin 34 32 33 16;
+#X obj 492 182 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 492 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 510 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 529 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 547 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 566 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 584 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 603 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 621 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 640 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 658 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 677 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 695 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 714 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 732 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 751 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 769 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 438 31 metro 100;
+#X obj 562 156 pack;
+#X text 536 17 pins are SR LOAD \, CLOCK and DATA 4th argument is number
+bits to shift;
+#X connect 2 0 17 0;
+#X connect 5 0 2 0;
+#X connect 7 0 20 0;
+#X connect 8 0 10 0;
+#X connect 10 0 20 0;
+#X connect 11 0 12 0;
+#X connect 13 0 18 0;
+#X connect 14 0 13 0;
+#X connect 15 0 19 0;
+#X connect 16 0 15 0;
+#X connect 20 0 6 0;
+#X connect 21 0 24 0;
+#X connect 24 0 43 0;
+#X connect 24 1 43 1;
+#X connect 25 0 26 0;
+#X connect 25 1 27 0;
+#X connect 25 2 28 0;
+#X connect 25 3 29 0;
+#X connect 25 4 30 0;
+#X connect 25 5 31 0;
+#X connect 25 6 32 0;
+#X connect 25 7 33 0;
+#X connect 25 8 34 0;
+#X connect 25 9 35 0;
+#X connect 25 10 36 0;
+#X connect 25 11 37 0;
+#X connect 25 12 38 0;
+#X connect 25 13 39 0;
+#X connect 25 14 40 0;
+#X connect 25 15 41 0;
+#X connect 42 0 21 0;
+#X connect 43 0 25 0;
