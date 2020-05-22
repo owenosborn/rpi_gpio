@@ -5,6 +5,8 @@
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 
+#define SPI_CH 1
+
 static t_class *rpi_gpio_mcp3008_class;
 
 typedef struct _rpi_gpio_mcp3008 {
@@ -26,7 +28,7 @@ static uint32_t adc_read(uint8_t adcnum) {
     spibuf[1] = 0;
     spibuf[2] = 0;
 
-    wiringPiSPIDataRW(1, spibuf, 3);    
+    wiringPiSPIDataRW(SPI_CH, spibuf, 3);    
 
     return ((spibuf[1] << 8) | (spibuf[2])) >> 4;
     
@@ -69,7 +71,7 @@ static void *rpi_gpio_mcp3008_new(t_floatarg f1) {
     	//exit (1) ;
     }
 
-    wiringPiSPISetup(1, 4*1000*1000);  // for adc
+    wiringPiSPISetup(SPI_CH, 4*1000*1000);  // for adc
     
     return (x);
 }

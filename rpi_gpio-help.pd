@@ -1,4 +1,4 @@
-#N canvas 149 61 814 596 10;
+#N canvas 151 55 814 596 10;
 #X floatatom 302 162 5 0 0 0 - - -, f 5;
 #X text 76 94 args are (pin number \, mode (0=OUTPUT \, 1=INPUT) \,
 and default value, f 25;
@@ -23,25 +23,23 @@ pin, f 27;
 #X obj 250 535 rpi_gpio 23 0 1;
 #X obj 390 537 rpi_gpio 24 0 1;
 #X obj 48 316 rpi_gpio 1 1 0;
-#X obj 513 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X obj 533 94 rpi_gpio_shiftin 34 32 33 16;
 #X obj 492 182 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 492 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 492 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 510 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 510 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 529 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 529 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 547 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 547 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 566 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 566 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 584 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 584 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 603 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 603 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 621 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 621 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 640 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -55,17 +53,14 @@ pin, f 27;
 1;
 #X obj 732 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 751 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 751 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 769 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 769 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 438 31 metro 100;
 #X obj 562 156 pack;
 #X text 536 17 pins are SR LOAD \, CLOCK and DATA 4th argument is number
 bits to shift;
 #X obj 520 268 rpi_gpio_mcp3008, f 36;
-#X obj 483 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X floatatom 768 339 5 0 0 0 - - -, f 5;
 #X floatatom 723 339 5 0 0 0 - - -, f 5;
 #X floatatom 675 335 5 0 0 0 - - -, f 5;
@@ -77,46 +72,50 @@ bits to shift;
 #X obj 287 51 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 313 75 metro 50;
+#X obj 367 14 loadbang;
+#X obj 496 19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 520 60 metro 5;
 #X connect 0 0 13 0;
 #X connect 2 0 0 0;
 #X connect 4 0 16 0;
 #X connect 5 0 7 0;
 #X connect 7 0 16 0;
-#X connect 8 0 50 0;
+#X connect 8 0 47 0;
 #X connect 9 0 14 0;
 #X connect 10 0 9 0;
 #X connect 11 0 15 0;
 #X connect 12 0 11 0;
 #X connect 16 0 3 0;
-#X connect 17 0 18 0;
-#X connect 18 0 37 0;
-#X connect 18 1 37 1;
-#X connect 19 0 20 0;
-#X connect 19 1 21 0;
-#X connect 19 2 22 0;
-#X connect 19 3 23 0;
-#X connect 19 4 24 0;
-#X connect 19 5 25 0;
-#X connect 19 6 26 0;
-#X connect 19 7 27 0;
-#X connect 19 8 28 0;
-#X connect 19 9 29 0;
-#X connect 19 10 30 0;
-#X connect 19 11 31 0;
-#X connect 19 12 32 0;
-#X connect 19 13 33 0;
-#X connect 19 14 34 0;
-#X connect 19 15 35 0;
-#X connect 36 0 17 0;
-#X connect 37 0 19 0;
-#X connect 39 0 48 0;
-#X connect 39 1 47 0;
-#X connect 39 2 46 0;
-#X connect 39 3 45 0;
-#X connect 39 4 44 0;
-#X connect 39 5 43 0;
-#X connect 39 6 42 0;
-#X connect 39 7 41 0;
-#X connect 40 0 39 0;
+#X connect 17 0 35 0;
+#X connect 17 1 35 1;
+#X connect 18 0 19 0;
+#X connect 18 1 20 0;
+#X connect 18 2 21 0;
+#X connect 18 3 22 0;
+#X connect 18 4 23 0;
+#X connect 18 5 24 0;
+#X connect 18 6 25 0;
+#X connect 18 7 26 0;
+#X connect 18 8 27 0;
+#X connect 18 9 28 0;
+#X connect 18 10 29 0;
+#X connect 18 11 30 0;
+#X connect 18 12 31 0;
+#X connect 18 13 32 0;
+#X connect 18 14 33 0;
+#X connect 18 15 34 0;
+#X connect 35 0 18 0;
+#X connect 37 0 45 0;
+#X connect 37 1 44 0;
+#X connect 37 2 43 0;
+#X connect 37 3 42 0;
+#X connect 37 4 41 0;
+#X connect 37 5 40 0;
+#X connect 37 6 39 0;
+#X connect 37 7 38 0;
+#X connect 46 0 47 0;
+#X connect 47 0 37 0;
+#X connect 48 0 50 0;
 #X connect 49 0 50 0;
-#X connect 50 0 40 0;
+#X connect 50 0 17 0;
