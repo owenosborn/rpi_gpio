@@ -57,7 +57,8 @@ static void *rpi_gpio_new(t_floatarg f1, t_floatarg f2, t_floatarg f3) {
     }
     else {
     	pinMode (x->x_gpio_pin, INPUT) ;
-    	post("pin %d input mode", x->x_gpio_pin);
+        pullUpDnControl(x->x_gpio_pin, PUD_UP);
+        post("pin %d input mode", x->x_gpio_pin);
     }
 
     return (x);
